@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from .base_page import BasePage
 
 class HomePage(BasePage):
@@ -10,7 +11,9 @@ class HomePage(BasePage):
     def click_login(self):
         self.click(self.login_btn)
     def click_signup(self):
-        self.click(self.signup_btn)
+        self.wait.until(
+            EC.element_to_be_clickable(self.signup_btn)
+        ).click()
 
     def is_login_visible(self):
         return self.is_visible(self.login_btn)
@@ -19,7 +22,11 @@ class HomePage(BasePage):
         return self.is_visible(self.signup_btn)
 
     def is_menu_visible(self, text):
-        return text in self.driver.page_source
+        return self.driver.find_element(
+            By.XPATH,
+            f"//*[contains(text(),'{text}')]"
+        ).is_displayed()
+        # return text in self.driver.page_source
 
     chat_widget = (
         By.XPATH,

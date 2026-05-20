@@ -51,23 +51,3 @@ class LoginPage(BasePage):
             )
         ).click()
 
-    # def get_invalid_message(self):
-    #     return self.wait.until(
-    #         lambda d:
-    #         d.find_element(*self.invalid_msg)).text
-    #
-    # def logout(self):
-    #     icon = self.wait.until(
-    #         lambda d:
-    #         d.find_element(*self.icon_click))
-    #
-    #     ActionChains(
-    #         self.driver
-    #     ).move_to_element(icon).perform()
-    #
-    #     self.driver.execute_script(
-    #         "arguments[0].click();",
-    #         icon
-    #     )
-    #
-    #     self.click(self.logout_btn)

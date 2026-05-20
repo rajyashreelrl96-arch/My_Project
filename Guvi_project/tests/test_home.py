@@ -1,4 +1,6 @@
-from Guvi_project.pages.home_page import HomePage
+from pages.home_page import HomePage
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #Test Case 1
 def test_verify_navigate_url(setup):
@@ -21,10 +23,23 @@ def test_verify_signup_button_is_displayed(setup):
 
 #Test Case 5
 def test_verify_sign_button_is_clickable(setup):
-    home = HomePage(setup)
-    home.click_signup()
-    assert  "guvi.in" in setup.current_url
+        home = HomePage(setup)
 
+        home.click_signup()
+
+        WebDriverWait(setup, 10).until(
+            EC.url_contains("register")
+        )
+    # home = HomePage(setup)
+    # home.click_signup()
+    # WebDriverWait(setup, 10).until(
+    #     lambda d: "signup" in d.current_url.lower()
+    # )
+    #
+    # assert "signup" in setup.current_url.lower()
+    # assert  "guvi.in" in setup.current_url
+
+#Test Case 6
 def test_menu(setup):
 
     home = HomePage(setup)
@@ -37,6 +52,7 @@ def test_menu(setup):
         "Courses"
     )
 
+#Test Case 7
 def test_dobby_assistant(setup):
 
     home = HomePage(setup)
