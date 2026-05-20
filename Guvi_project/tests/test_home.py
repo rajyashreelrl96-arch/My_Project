@@ -30,14 +30,6 @@ def test_verify_sign_button_is_clickable(setup):
         WebDriverWait(setup, 10).until(
             EC.url_contains("register")
         )
-    # home = HomePage(setup)
-    # home.click_signup()
-    # WebDriverWait(setup, 10).until(
-    #     lambda d: "signup" in d.current_url.lower()
-    # )
-    #
-    # assert "signup" in setup.current_url.lower()
-    # assert  "guvi.in" in setup.current_url
 
 #Test Case 6
 def test_menu(setup):
