@@ -1,6 +1,6 @@
-from Project_E_commerce.pages.login_page import LoginPage
-from Project_E_commerce.pages.inventory_page import InventoryPage
-from Project_E_commerce.pages.menu_page import MenuPage
+from login_page import LoginPage
+from inventory_page import InventoryPage
+from menu_page import MenuPage
 
 
 def test_reset_app_functionality(setup):
