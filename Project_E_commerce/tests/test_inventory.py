@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
-from Project_E_commerce.pages.login_page import LoginPage
-from Project_E_commerce.pages.inventory_page import InventoryPage
+from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
 
 
 def test_cart_icon_visibility(setup):

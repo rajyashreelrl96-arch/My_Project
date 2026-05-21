@@ -1,7 +1,7 @@
-from Project_E_commerce.pages.login_page import LoginPage
-from Project_E_commerce.pages.inventory_page import InventoryPage
-from Project_E_commerce.pages.cart_page import CartPage
-from Project_E_commerce.pages.checkout_page import CheckoutPage
+from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
+from pages.cart_page import CartPage
+from pages.checkout_page import CheckoutPage
 
 
 def test_checkout_order(setup):

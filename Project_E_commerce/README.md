@@ -1,33 +1,41 @@
-SAUCEDEMO TESTING USING SELENIUM AUTOMATION FRAMEWORK 
+## SAUCEDEMO TESTING USING SELENIUM AUTOMATION FRAMEWORK 
 
-Project Overview:
+# Project Overview:
 
-This project is an automated testing framework developed using:
+This project is an **automated testing framework** developed using:
 
-*Python
+- Python
 
-*Selenium Web Driver
+- Selenium Web Driver
 
-*Pytest
+- Pytest
 
-*Page Object Model(POM)
+- Page Object Model(POM)
 
-*Allure Report
+- Allure Report
 
-The framework automates testing of the SauceDemo web application
+The framework automates testing of the **SauceDemo web application**
 
-Project Architecture:
-Saucedemo
+## Project Architecture:
+### Project_E_commerce
 
--->saucedemo.py   (Page object Model)
+|_pages
+  - cart_page.py
+  - checkout_page.py
+  - inventory_page.py
+  - login_page.py
+  - menu_page.py
 
--->test_saucedemo.py  (Test Cases)
+|_tests
 
--->allure-attachment   (Allure results)
+  - test_checkout.py
+  - test_inventory.py
+  - test_login.py
+  - test_reset_app.py
 
--->allure-report     (Generate HTML report)
+|_conftest.py
 
--->README.md (Project Documentation)
+|_README.md
 
 Features:
 
@@ -51,25 +59,16 @@ Features:
 
 10.Parameterized Test Execution
 
-Usage:
 
-Run all Test Cases - pytest
+#### Generate Allure Results:
 
-Run Specific Test case - pytest test_saucedemo.py
+pytest Project_E_commerce/tests --alluredir=allure-results
 
-Generate HTML Report: 
-
-pytest Project-1/test_saucedemo.py --html=report.html 
-
-Generate Allure Results:
-
-pytest Project-1/test_saucedemo.py --alluredir=allure-reports
-
-Generate Allure Report:
+**Generate Allure Report:**
 
 allure generate reports -o allure-report --clean
 
-Open Allure Report:
+**Open Allure Report:**
 
 allure open allure-report
 
